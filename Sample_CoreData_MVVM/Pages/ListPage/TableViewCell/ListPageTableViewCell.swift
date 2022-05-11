@@ -9,16 +9,26 @@ import UIKit
 
 class ListPageTableViewCell: UITableViewCell {
 
-    @IBOutlet var label: UILabel!
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var detailLabel: UILabel!
+    @IBOutlet var isDoneSwitch: UISwitch!
+    @IBOutlet var colorView: UIView!
+
+    var viewModel: ListPageTableCellViewModel?
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        isDoneSwitch.subviews[0].subviews[0].backgroundColor = .secondarySystemBackground
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-    
+
+    func configureCell(model: ListPageModel){
+        titleLabel.text = model.title
+        detailLabel.text = model.details
+        isDoneSwitch.isOn = model.is_done
+        colorView.backgroundColor = model.color
+    }
 }

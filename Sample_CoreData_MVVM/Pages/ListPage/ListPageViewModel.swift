@@ -20,12 +20,28 @@ class ListPageViewModel: BaseViewModelProtocol {
 
     func startPage() -> BaseViewProtocol {
         let viewController = ListPageViewController.instantiate()
+        fetchAllData()
         self.delegate = viewController
         viewController.viewModel = self
-
-
+        viewController.tableViewDelegate = self
         return viewController
     }
+
+    private func fetchAllData(){
+        do{
+            let todoList = try context.fetch(Todo.fetchRequest())
+            model = ListPageModel.initFromAllList(todos: todoList)
+        }catch{
+            fatalError("noteList cannot fetch")
+        }
+//        let todo = Todo(context: context)
+//        todo.title = "nikki"
+//        todo.detail = "SelamunHelloSelamunHello\nSelamunHello\nSelamunHelloSelamunHello\nSelamunHello"
+//        todo.is_done = false
+//        todo.color = .yellow
+//        appdelegate.saveContext()
+    }
+
     
 }
 
@@ -35,8 +51,7 @@ extension ListPageViewModel: TableViewProtocol{
     }
 
     func getCellContext(index: Int, tableView: UITableView) -> UITableViewCell {
-        UITableViewCell()
+        let cell = ListPageTableCellViewModel(model: model[index]).start(tableView: tableView)
+        return cell
     }
-
-
 }

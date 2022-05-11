@@ -10,6 +10,7 @@ import UIKit
 class ListPageViewController: BaseViewProtocol {
     static var storyboardName: String = Storyboards.listPage.rawValue
     var viewModel: BaseViewModelProtocol?
+    var tableViewDelegate: TableViewProtocol?
 
     @IBOutlet var tableView: UITableView!
     
@@ -25,13 +26,11 @@ class ListPageViewController: BaseViewProtocol {
 
 extension ListPageViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        3
+        tableViewDelegate?.getDataCount() ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Storyboards.listPageCell.rawValue) as! ListPageTableViewCell
-        cell.label?.text = "nikkki"
-        return cell
+        tableViewDelegate?.getCellContext(index: indexPath.row, tableView: tableView) ?? UITableViewCell()
     }
 
 

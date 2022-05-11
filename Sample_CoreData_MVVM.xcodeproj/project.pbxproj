@@ -26,6 +26,7 @@
 		2E9B99F0282A15D8004C8355 /* Todo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B99EE282A15D8004C8355 /* Todo+CoreDataProperties.swift */; };
 		2E9B99F5282A1BF9004C8355 /* ListPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B99F3282A1BF9004C8355 /* ListPageTableViewCell.swift */; };
 		2E9B99F6282A1BF9004C8355 /* ListPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E9B99F4282A1BF9004C8355 /* ListPageTableViewCell.xib */; };
+		2E9B99F8282A3205004C8355 /* ListPageTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B99F7282A3205004C8355 /* ListPageTableCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		2E9B99EE282A15D8004C8355 /* Todo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Todo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2E9B99F3282A1BF9004C8355 /* ListPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPageTableViewCell.swift; sourceTree = "<group>"; };
 		2E9B99F4282A1BF9004C8355 /* ListPageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListPageTableViewCell.xib; sourceTree = "<group>"; };
+		2E9B99F7282A3205004C8355 /* ListPageTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPageTableCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			children = (
 				2E9B99F3282A1BF9004C8355 /* ListPageTableViewCell.swift */,
 				2E9B99F4282A1BF9004C8355 /* ListPageTableViewCell.xib */,
+				2E9B99F7282A3205004C8355 /* ListPageTableCellViewModel.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E9B99F8282A3205004C8355 /* ListPageTableCellViewModel.swift in Sources */,
 				2E9B99E1282A1214004C8355 /* ListPageModel.swift in Sources */,
 				2E9B99DF282A11F5004C8355 /* ListPageViewModel.swift in Sources */,
 				2E9B99D9282A10C4004C8355 /* BaseViewModelProtocol.swift in Sources */,
