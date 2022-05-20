@@ -8,7 +8,8 @@
 import Foundation
 
 enum Storyboards: String{
-    case listPage = "ListPageViewController"
+    case listPage = "ListPage"
+    case detailPage = "DetailPage"
 
     case listPageCell = "ListPageTableCell"
 }

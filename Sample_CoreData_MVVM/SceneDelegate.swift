@@ -23,7 +23,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
 
-        let vc = ListPageViewModel().startPage()
+        var viewModel = ListPageViewModel()
+        let vc = viewModel.startPage()
         navigationController.pushViewController(vc, animated: true)
     }
 

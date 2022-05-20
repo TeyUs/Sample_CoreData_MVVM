@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension BaseViewControllerProtocol where Self: UIViewController{
+extension BaseViewControllerProtocol{
     static func instantiate() -> Self{
         let storyboard = UIStoryboard(name: Self.storyboardName, bundle: nil)
 

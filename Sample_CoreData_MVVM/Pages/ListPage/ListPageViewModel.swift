@@ -8,29 +8,32 @@
 import Foundation
 import UIKit.UITableView
 import UIKit.UITableViewCell
+import UIKit
 
-protocol TableViewProtocol {
-    func getDataCount() -> Int
-    func getCellContext(index:Int, tableView: UITableView) -> UITableViewCell
+enum ChangeInCell {
+    case deleted(index:Int)
+    case updated(detailPageModel: DetailPageModel)
+    case created(listPageModel: ListPageModel)
 }
 
-class ListPageViewModel: BaseViewModelProtocol {
-    var delegate: BaseViewProtocol?
-    var model = [ListPageModel]()
 
-    func startPage() -> BaseViewProtocol {
-        let viewController = ListPageViewController.instantiate()
-        fetchAllData()
-        self.delegate = viewController
-        viewController.viewModel = self
-        viewController.tableViewDelegate = self
-        return viewController
+
+class ListPageViewModel: ListPageViewModelProtocol {
+
+    typealias ViewType = ListPageViewController
+    typealias ModelType = ListPageModelList
+
+    var delegate: ViewType?
+    var model: ListPageModelList = ListPageModelList()
+
+    init() {
+        model = fetchAllData()
     }
-
-    private func fetchAllData(){
+    
+    private func fetchAllData() -> ModelType{
         do{
             let todoList = try context.fetch(Todo.fetchRequest())
-            model = ListPageModel.initFromAllList(todos: todoList)
+            return ListPageModel.initFromAllListAsList(todos: todoList)
         }catch{
             fatalError("noteList cannot fetch")
         }
@@ -42,16 +45,58 @@ class ListPageViewModel: BaseViewModelProtocol {
 //        appdelegate.saveContext()
     }
 
-    
-}
-
-extension ListPageViewModel: TableViewProtocol{
+//    MARK: TableView
     func getDataCount() -> Int {
-        model.count
+        model.list.count
     }
 
-    func getCellContext(index: Int, tableView: UITableView) -> UITableViewCell {
-        let cell = ListPageTableCellViewModel(model: model[index]).start(tableView: tableView)
+    func getCell(index: Int, tableView: UITableView) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = model.list[index].title
         return cell
+    }
+
+//    MARK: Navigation
+    func goToAddPage() {
+
+    }
+
+    func goToDetailPage(index: Int) {
+        var viewModel = DetailPageViewModel(listPageModel: model.list[index], index: index, refreshCell: splitCallBack(change:))
+        let vc = viewModel.startPage()
+        delegate?.navigationController?.pushViewController(vc, animated: true)
+    }
+
+//    MARK: Action
+    func splitCallBack(change: ChangeInCell){
+        switch change {
+        case .deleted(let index):
+            deleteCell(index: index)
+        case .updated(let detailPageModel):
+            updateCell(detailPageModel: detailPageModel)
+        case .created(let listPageModel):
+            createCell(listPageModel: listPageModel)
+        }
+    }
+
+    func deleteCell(index: Int) {
+        model.list.remove(at: index)
+        delegate?.deleteCell(index: index)
+    }
+
+    func updateCell(detailPageModel: DetailPageModel) {
+        model.list[detailPageModel.index] = ListPageModel(detailPageModel: detailPageModel)
+        delegate?.updateCell(index: detailPageModel.index)
+    }
+
+    func createCell(listPageModel: ListPageModel) {
+        model.list.append(listPageModel)
+        delegate?.createCell(index: model.list.endIndex - 1 )//model.list.firstIndex(of: data) ?? (model.list.endIndex - 1))
+    }
+
+    func deleteCellForEditingStyle(index: Int) {
+        context.delete(model.list[index].referance)
+        appdelegate.saveContext()
+        deleteCell(index: index)
     }
 }

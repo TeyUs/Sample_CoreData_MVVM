@@ -27,7 +27,7 @@ class ListPageTableViewCell: UITableViewCell {
 
     func configureCell(model: ListPageModel){
         titleLabel.text = model.title
-        detailLabel.text = model.details
+        detailLabel.text = model.detail
         isDoneSwitch.isOn = model.is_done
         colorView.backgroundColor = model.color
     }

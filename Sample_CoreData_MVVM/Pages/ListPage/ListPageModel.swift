@@ -8,24 +8,39 @@
 import Foundation
 import UIKit.UIColor
 
-struct ListPageModel: BaseModelProtocol {
+struct ListPageModelList: ListPageModelProtocol{
+    var list = [ListPageModel]() // Array<ListPageModel>()//
+}
+
+struct ListPageModel: ListPageModelProtocol {
     var title: String
     var is_done: Bool
-    var details: String
+    var detail: String
     var color: UIColor
+    var referance: Todo
 
     internal init(todo: Todo) {
         self.title = todo.title
         self.is_done = todo.is_done
-        self.details = todo.detail
+        self.detail = todo.detail
         self.color = todo.color
+        self.referance = todo.self
     }
 
     internal init(title: String, is_done: Bool, details: String, color: UIColor) {
         self.title = title
         self.is_done = is_done
-        self.details = details
+        self.detail = details
         self.color = color
+        self.referance = Todo(context: context)
+    }
+
+    internal init(detailPageModel: DetailPageModel) {
+        self.title = detailPageModel.title
+        self.is_done = detailPageModel.is_done
+        self.detail = detailPageModel.detail
+        self.color = detailPageModel.color
+        self.referance = detailPageModel.referance
     }
 
     static func initFromAllList(todos: [Todo]) -> [ListPageModel]{
@@ -34,5 +49,14 @@ struct ListPageModel: BaseModelProtocol {
             listModel.append(ListPageModel(todo: todo))
         }
         return listModel
+    }
+
+    static func initFromAllListAsList(todos: [Todo]) -> ListPageModelList{
+        var listModel = [ListPageModel]()
+        for todo in todos {
+            listModel.append(ListPageModel(todo: todo))
+        }
+        let listPageModelList = ListPageModelList(list: listModel)
+        return listPageModelList
     }
 }

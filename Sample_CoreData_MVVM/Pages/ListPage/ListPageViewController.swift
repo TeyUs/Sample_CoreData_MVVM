@@ -7,13 +7,13 @@
 
 import UIKit
 
-class ListPageViewController: BaseViewProtocol {
+class ListPageViewController: UIViewController, ListPageViewControllerProtocol {
+    typealias ViewModelType = ListPageViewModel
     static var storyboardName: String = Storyboards.listPage.rawValue
-    var viewModel: BaseViewModelProtocol?
-    var tableViewDelegate: TableViewProtocol?
+    var viewModel: ViewModelType?
 
     @IBOutlet var tableView: UITableView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,16 +22,46 @@ class ListPageViewController: BaseViewProtocol {
 
         tableView.register(UINib(nibName: ListPageTableViewCell.className, bundle: .main), forCellReuseIdentifier: Storyboards.listPageCell.rawValue)
     }
+
+
+//    MARK: Navigation
+    func goToAddPage() {
+
+    }
+    
+//    MARK: Action
+    func deleteCell(index: Int) {
+        let indexpath = IndexPath(item: index, section: 0)
+        tableView.deleteRows(at: [indexpath], with: .automatic)
+    }
+
+    func updateCell(index: Int) {
+        let indexpath = IndexPath(item: index, section: 0)
+        tableView.reloadRows(at: [indexpath], with: .automatic)
+    }
+
+    func createCell(index: Int) {
+        let indexpath = IndexPath(item: index, section: 0)
+        tableView.insertRows(at: [indexpath], with: .automatic)
+    }
 }
 
 extension ListPageViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        tableViewDelegate?.getDataCount() ?? 0
+        viewModel?.getDataCount() ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableViewDelegate?.getCellContext(index: indexPath.row, tableView: tableView) ?? UITableViewCell()
+        viewModel?.getCell(index: indexPath.row, tableView: tableView) ?? UITableViewCell()
     }
 
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel?.goToDetailPage(index: indexPath.row)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
+        if editingStyle == .delete{
+            viewModel?.deleteCellForEditingStyle(index: indexPath.row)
+        }
+    }
 }

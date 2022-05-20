@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E252D382830DE0900BE31B5 /* ListPageContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E252D372830DE0900BE31B5 /* ListPageContract.swift */; };
 		2E9B99BE2829A37C004C8355 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B99BD2829A37C004C8355 /* AppDelegate.swift */; };
 		2E9B99C02829A37C004C8355 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B99BF2829A37C004C8355 /* SceneDelegate.swift */; };
 		2E9B99C82829A37C004C8355 /* Sample_CoreData_MVVM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B99C62829A37C004C8355 /* Sample_CoreData_MVVM.xcdatamodeld */; };
@@ -21,15 +22,26 @@
 		2E9B99E5282A12DB004C8355 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B99E4282A12DB004C8355 /* Storyboards.swift */; };
 		2E9B99E8282A13AD004C8355 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B99E7282A13AD004C8355 /* NSObjectExtension.swift */; };
 		2E9B99EA282A1405004C8355 /* BaseViewControllerProtocol+StoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B99E9282A1405004C8355 /* BaseViewControllerProtocol+StoryBoard.swift */; };
-		2E9B99EC282A1491004C8355 /* ListPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E9B99EB282A1491004C8355 /* ListPageViewController.storyboard */; };
+		2E9B99EC282A1491004C8355 /* ListPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E9B99EB282A1491004C8355 /* ListPage.storyboard */; };
 		2E9B99EF282A15D8004C8355 /* Todo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B99ED282A15D8004C8355 /* Todo+CoreDataClass.swift */; };
 		2E9B99F0282A15D8004C8355 /* Todo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B99EE282A15D8004C8355 /* Todo+CoreDataProperties.swift */; };
 		2E9B99F5282A1BF9004C8355 /* ListPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B99F3282A1BF9004C8355 /* ListPageTableViewCell.swift */; };
 		2E9B99F6282A1BF9004C8355 /* ListPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E9B99F4282A1BF9004C8355 /* ListPageTableViewCell.xib */; };
 		2E9B99F8282A3205004C8355 /* ListPageTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B99F7282A3205004C8355 /* ListPageTableCellViewModel.swift */; };
+		2E9B99FE282B614F004C8355 /* DetailPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B99FD282B614F004C8355 /* DetailPageViewModel.swift */; };
+		2E9B9A00282B61B1004C8355 /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B99FF282B61B1004C8355 /* DetailPageViewController.swift */; };
+		2E9B9A02282B61EE004C8355 /* DetailPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B9A01282B61EE004C8355 /* DetailPageModel.swift */; };
+		2E9B9A04282B6213004C8355 /* DetailPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E9B9A03282B6213004C8355 /* DetailPage.storyboard */; };
+		2E9B9A09282CB843004C8355 /* NewTodoPageContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B9A08282CB843004C8355 /* NewTodoPageContract.swift */; };
+		2E9B9A0C282CC15B004C8355 /* NewTodoPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B9A0B282CC15B004C8355 /* NewTodoPageViewModel.swift */; };
+		2E9B9A0E282CC174004C8355 /* NewTodoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B9A0D282CC174004C8355 /* NewTodoPageViewController.swift */; };
+		2E9B9A10282CC197004C8355 /* NewTodoPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E9B9A0F282CC197004C8355 /* NewTodoPage.storyboard */; };
+		2E9B9A12282CC1A4004C8355 /* NewTodoPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B9A11282CC1A4004C8355 /* NewTodoPageModel.swift */; };
+		2E9B9A14282CC35A004C8355 /* DetailPageContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B9A13282CC35A004C8355 /* DetailPageContract.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E252D372830DE0900BE31B5 /* ListPageContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPageContract.swift; sourceTree = "<group>"; };
 		2E9B99BA2829A37C004C8355 /* Sample_CoreData_MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample_CoreData_MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E9B99BD2829A37C004C8355 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E9B99BF2829A37C004C8355 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,12 +58,22 @@
 		2E9B99E4282A12DB004C8355 /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		2E9B99E7282A13AD004C8355 /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		2E9B99E9282A1405004C8355 /* BaseViewControllerProtocol+StoryBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseViewControllerProtocol+StoryBoard.swift"; sourceTree = "<group>"; };
-		2E9B99EB282A1491004C8355 /* ListPageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListPageViewController.storyboard; sourceTree = "<group>"; };
+		2E9B99EB282A1491004C8355 /* ListPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListPage.storyboard; sourceTree = "<group>"; };
 		2E9B99ED282A15D8004C8355 /* Todo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Todo+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2E9B99EE282A15D8004C8355 /* Todo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Todo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2E9B99F3282A1BF9004C8355 /* ListPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPageTableViewCell.swift; sourceTree = "<group>"; };
 		2E9B99F4282A1BF9004C8355 /* ListPageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListPageTableViewCell.xib; sourceTree = "<group>"; };
 		2E9B99F7282A3205004C8355 /* ListPageTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPageTableCellViewModel.swift; sourceTree = "<group>"; };
+		2E9B99FD282B614F004C8355 /* DetailPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewModel.swift; sourceTree = "<group>"; };
+		2E9B99FF282B61B1004C8355 /* DetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
+		2E9B9A01282B61EE004C8355 /* DetailPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageModel.swift; sourceTree = "<group>"; };
+		2E9B9A03282B6213004C8355 /* DetailPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailPage.storyboard; sourceTree = "<group>"; };
+		2E9B9A08282CB843004C8355 /* NewTodoPageContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoPageContract.swift; sourceTree = "<group>"; };
+		2E9B9A0B282CC15B004C8355 /* NewTodoPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoPageViewModel.swift; sourceTree = "<group>"; };
+		2E9B9A0D282CC174004C8355 /* NewTodoPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoPageViewController.swift; sourceTree = "<group>"; };
+		2E9B9A0F282CC197004C8355 /* NewTodoPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewTodoPage.storyboard; sourceTree = "<group>"; };
+		2E9B9A11282CC1A4004C8355 /* NewTodoPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoPageModel.swift; sourceTree = "<group>"; };
+		2E9B9A13282CC35A004C8355 /* DetailPageContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageContract.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +142,8 @@
 		2E9B99DC282A11D6004C8355 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				2E9B9A07282CB7C9004C8355 /* NewTodoPage */,
+				2E9B99FC282B612C004C8355 /* DetailPage */,
 				2E9B99DD282A11DE004C8355 /* ListPage */,
 			);
 			path = Pages;
@@ -129,9 +153,10 @@
 			isa = PBXGroup;
 			children = (
 				2E9B99F2282A1BC1004C8355 /* TableViewCell */,
+				2E252D372830DE0900BE31B5 /* ListPageContract.swift */,
 				2E9B99DE282A11F5004C8355 /* ListPageViewModel.swift */,
 				2E9B99E2282A122A004C8355 /* ListPageViewController.swift */,
-				2E9B99EB282A1491004C8355 /* ListPageViewController.storyboard */,
+				2E9B99EB282A1491004C8355 /* ListPage.storyboard */,
 				2E9B99E0282A1214004C8355 /* ListPageModel.swift */,
 			);
 			path = ListPage;
@@ -163,6 +188,30 @@
 				2E9B99F7282A3205004C8355 /* ListPageTableCellViewModel.swift */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		2E9B99FC282B612C004C8355 /* DetailPage */ = {
+			isa = PBXGroup;
+			children = (
+				2E9B9A13282CC35A004C8355 /* DetailPageContract.swift */,
+				2E9B99FD282B614F004C8355 /* DetailPageViewModel.swift */,
+				2E9B99FF282B61B1004C8355 /* DetailPageViewController.swift */,
+				2E9B9A03282B6213004C8355 /* DetailPage.storyboard */,
+				2E9B9A01282B61EE004C8355 /* DetailPageModel.swift */,
+			);
+			path = DetailPage;
+			sourceTree = "<group>";
+		};
+		2E9B9A07282CB7C9004C8355 /* NewTodoPage */ = {
+			isa = PBXGroup;
+			children = (
+				2E9B9A08282CB843004C8355 /* NewTodoPageContract.swift */,
+				2E9B9A0B282CC15B004C8355 /* NewTodoPageViewModel.swift */,
+				2E9B9A0D282CC174004C8355 /* NewTodoPageViewController.swift */,
+				2E9B9A0F282CC197004C8355 /* NewTodoPage.storyboard */,
+				2E9B9A11282CC1A4004C8355 /* NewTodoPageModel.swift */,
+			);
+			path = NewTodoPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,7 +272,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E9B99EC282A1491004C8355 /* ListPageViewController.storyboard in Resources */,
+				2E9B9A10282CC197004C8355 /* NewTodoPage.storyboard in Resources */,
+				2E9B99EC282A1491004C8355 /* ListPage.storyboard in Resources */,
+				2E9B9A04282B6213004C8355 /* DetailPage.storyboard in Resources */,
 				2E9B99CD2829A37E004C8355 /* LaunchScreen.storyboard in Resources */,
 				2E9B99F6282A1BF9004C8355 /* ListPageTableViewCell.xib in Resources */,
 				2E9B99CA2829A37E004C8355 /* Assets.xcassets in Resources */,
@@ -238,15 +289,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E9B99F8282A3205004C8355 /* ListPageTableCellViewModel.swift in Sources */,
+				2E9B99FE282B614F004C8355 /* DetailPageViewModel.swift in Sources */,
+				2E9B9A0E282CC174004C8355 /* NewTodoPageViewController.swift in Sources */,
+				2E9B9A0C282CC15B004C8355 /* NewTodoPageViewModel.swift in Sources */,
+				2E9B9A12282CC1A4004C8355 /* NewTodoPageModel.swift in Sources */,
+				2E252D382830DE0900BE31B5 /* ListPageContract.swift in Sources */,
 				2E9B99E1282A1214004C8355 /* ListPageModel.swift in Sources */,
 				2E9B99DF282A11F5004C8355 /* ListPageViewModel.swift in Sources */,
 				2E9B99D9282A10C4004C8355 /* BaseViewModelProtocol.swift in Sources */,
 				2E9B99F0282A15D8004C8355 /* Todo+CoreDataProperties.swift in Sources */,
+				2E9B9A00282B61B1004C8355 /* DetailPageViewController.swift in Sources */,
+				2E9B9A02282B61EE004C8355 /* DetailPageModel.swift in Sources */,
 				2E9B99E8282A13AD004C8355 /* NSObjectExtension.swift in Sources */,
 				2E9B99D7282A10B2004C8355 /* BaseModelProtocol.swift in Sources */,
 				2E9B99F5282A1BF9004C8355 /* ListPageTableViewCell.swift in Sources */,
+				2E9B9A09282CB843004C8355 /* NewTodoPageContract.swift in Sources */,
 				2E9B99BE2829A37C004C8355 /* AppDelegate.swift in Sources */,
 				2E9B99EA282A1405004C8355 /* BaseViewControllerProtocol+StoryBoard.swift in Sources */,
+				2E9B9A14282CC35A004C8355 /* DetailPageContract.swift in Sources */,
 				2E9B99EF282A15D8004C8355 /* Todo+CoreDataClass.swift in Sources */,
 				2E9B99C82829A37C004C8355 /* Sample_CoreData_MVVM.xcdatamodeld in Sources */,
 				2E9B99E5282A12DB004C8355 /* Storyboards.swift in Sources */,
