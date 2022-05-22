@@ -16,7 +16,7 @@ class ListPageViewController: UIViewController, ListPageViewControllerProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         tableView.delegate = self
         tableView.dataSource = self
 
@@ -25,8 +25,8 @@ class ListPageViewController: UIViewController, ListPageViewControllerProtocol {
 
 
 //    MARK: Navigation
-    func goToAddPage() {
-
+    @IBAction func addNewTodo(_ sender: Any) {
+        viewModel?.goToAddPage()
     }
     
 //    MARK: Action

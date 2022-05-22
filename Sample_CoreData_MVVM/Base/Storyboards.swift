@@ -10,6 +10,7 @@ import Foundation
 enum Storyboards: String{
     case listPage = "ListPage"
     case detailPage = "DetailPage"
+    case newPage = "NewTodoPage"
 
     case listPageCell = "ListPageTableCell"
 }

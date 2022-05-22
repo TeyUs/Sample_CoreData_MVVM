@@ -43,6 +43,14 @@ struct ListPageModel: ListPageModelProtocol {
         self.referance = detailPageModel.referance
     }
 
+    internal init(newTodoPageModel: NewTodoPageModel) {
+        self.title = newTodoPageModel.title
+        self.is_done = false
+        self.detail = newTodoPageModel.detail
+        self.color = newTodoPageModel.color
+        self.referance = newTodoPageModel.referance!
+    }
+
     static func initFromAllList(todos: [Todo]) -> [ListPageModel]{
         var listModel = [ListPageModel]()
         for todo in todos {

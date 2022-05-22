@@ -1,30 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17122"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewTodoPageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="NewTodoPageViewController" customModule="Sample_CoreData_MVVM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zt9-ZR-4nI">
+                                <rect key="frame" x="30" y="74" width="354" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wAM-pJ-Ulw">
+                                <rect key="frame" x="30" y="138" width="354" height="534"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hig-2k-VBd">
+                                <rect key="frame" x="30" y="712" width="354" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Zym-01-Bhr"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemGray6Color"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Choose Color">
+                                    <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="chooseColor:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7us-WJ-YWS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfn-MF-P5G">
+                                <rect key="frame" x="30" y="772" width="354" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="shG-xX-4r0"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="rFA-8T-58j"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zt9-ZR-4nI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="1RL-wd-ixN"/>
+                            <constraint firstItem="wAM-pJ-Ulw" firstAttribute="top" secondItem="zt9-ZR-4nI" secondAttribute="bottom" constant="30" id="5ww-kf-ffp"/>
+                            <constraint firstItem="wAM-pJ-Ulw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="Bc8-W9-bVk"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wAM-pJ-Ulw" secondAttribute="trailing" constant="30" id="Do7-fN-QSd"/>
+                            <constraint firstItem="vfn-MF-P5G" firstAttribute="top" secondItem="hig-2k-VBd" secondAttribute="bottom" constant="20" id="FX5-rg-Qwl"/>
+                            <constraint firstItem="hig-2k-VBd" firstAttribute="top" secondItem="wAM-pJ-Ulw" secondAttribute="bottom" constant="40" id="Gu3-O8-O63"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="vfn-MF-P5G" secondAttribute="trailing" constant="30" id="Hfc-la-5Lg"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hig-2k-VBd" secondAttribute="trailing" constant="30" id="Oih-4A-4Uk"/>
+                            <constraint firstItem="hig-2k-VBd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="TrS-GW-HNq"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="vfn-MF-P5G" secondAttribute="bottom" constant="50" id="bt2-uR-blm"/>
+                            <constraint firstItem="vfn-MF-P5G" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="oU5-1c-NN9"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zt9-ZR-4nI" secondAttribute="trailing" constant="30" id="us2-cv-PIT"/>
+                            <constraint firstItem="zt9-ZR-4nI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="ytf-xx-3tX"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="Kig-tj-b6j">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="njY-nT-PQB">
+                            <color key="tintColor" systemColor="tintColor"/>
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="Y6W-OH-hqX" id="yxh-fB-EEy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="detailTextView" destination="wAM-pJ-Ulw" id="Xl9-b0-Z6m"/>
+                        <outlet property="titleTextField" destination="zt9-ZR-4nI" id="lpV-Bz-kWd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-128" y="37"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

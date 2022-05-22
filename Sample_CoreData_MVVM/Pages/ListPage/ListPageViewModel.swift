@@ -6,8 +6,6 @@
 //
 
 import Foundation
-import UIKit.UITableView
-import UIKit.UITableViewCell
 import UIKit
 
 enum ChangeInCell {
@@ -15,8 +13,6 @@ enum ChangeInCell {
     case updated(detailPageModel: DetailPageModel)
     case created(listPageModel: ListPageModel)
 }
-
-
 
 class ListPageViewModel: ListPageViewModelProtocol {
 
@@ -51,14 +47,23 @@ class ListPageViewModel: ListPageViewModelProtocol {
     }
 
     func getCell(index: Int, tableView: UITableView) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = model.list[index].title
-        return cell
+//        let cell = UITableViewCell()
+//        cell.textLabel?.text = model.list[index].title
+//        return cell
+        var cellVM = ListPageTableCellViewModel(model: model.list[index], tableView: tableView, switchChanged:{ [weak self] isOn in
+            guard var listModel = self?.model.list[index] else{ return }
+            listModel.is_done = isOn
+            let detailModel = DetailPageModel(listPageModel: listModel, index: index)
+            self?.updateCell(detailPageModel: detailModel)
+        })
+        return cellVM.startCell()
     }
 
 //    MARK: Navigation
     func goToAddPage() {
-
+        var viewModel = NewTodoPageViewModel(refreshCell: splitCallBack(change:))
+        let vc = viewModel.startPage()
+        delegate?.navigationController?.pushViewController(vc, animated: true)
     }
 
     func goToDetailPage(index: Int) {

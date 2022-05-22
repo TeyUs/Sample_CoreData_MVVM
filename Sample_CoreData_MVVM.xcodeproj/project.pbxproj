@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2E252D382830DE0900BE31B5 /* ListPageContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E252D372830DE0900BE31B5 /* ListPageContract.swift */; };
+		2E8A242B283804C1009373A6 /* ViewController+TapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8A242A283804C1009373A6 /* ViewController+TapGesture.swift */; };
+		2E8A242D2838EB66009373A6 /* ListPageTableViewCellContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8A242C2838EB66009373A6 /* ListPageTableViewCellContract.swift */; };
 		2E9B99BE2829A37C004C8355 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B99BD2829A37C004C8355 /* AppDelegate.swift */; };
 		2E9B99C02829A37C004C8355 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B99BF2829A37C004C8355 /* SceneDelegate.swift */; };
 		2E9B99C82829A37C004C8355 /* Sample_CoreData_MVVM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B99C62829A37C004C8355 /* Sample_CoreData_MVVM.xcdatamodeld */; };
@@ -42,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		2E252D372830DE0900BE31B5 /* ListPageContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPageContract.swift; sourceTree = "<group>"; };
+		2E8A242A283804C1009373A6 /* ViewController+TapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+TapGesture.swift"; sourceTree = "<group>"; };
+		2E8A242C2838EB66009373A6 /* ListPageTableViewCellContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPageTableViewCellContract.swift; sourceTree = "<group>"; };
 		2E9B99BA2829A37C004C8355 /* Sample_CoreData_MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample_CoreData_MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E9B99BD2829A37C004C8355 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E9B99BF2829A37C004C8355 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 			children = (
 				2E9B99E7282A13AD004C8355 /* NSObjectExtension.swift */,
 				2E9B99E9282A1405004C8355 /* BaseViewControllerProtocol+StoryBoard.swift */,
+				2E8A242A283804C1009373A6 /* ViewController+TapGesture.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 		2E9B99F2282A1BC1004C8355 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				2E8A242C2838EB66009373A6 /* ListPageTableViewCellContract.swift */,
 				2E9B99F3282A1BF9004C8355 /* ListPageTableViewCell.swift */,
 				2E9B99F4282A1BF9004C8355 /* ListPageTableViewCell.xib */,
 				2E9B99F7282A3205004C8355 /* ListPageTableCellViewModel.swift */,
@@ -305,9 +311,11 @@
 				2E9B99F5282A1BF9004C8355 /* ListPageTableViewCell.swift in Sources */,
 				2E9B9A09282CB843004C8355 /* NewTodoPageContract.swift in Sources */,
 				2E9B99BE2829A37C004C8355 /* AppDelegate.swift in Sources */,
+				2E8A242D2838EB66009373A6 /* ListPageTableViewCellContract.swift in Sources */,
 				2E9B99EA282A1405004C8355 /* BaseViewControllerProtocol+StoryBoard.swift in Sources */,
 				2E9B9A14282CC35A004C8355 /* DetailPageContract.swift in Sources */,
 				2E9B99EF282A15D8004C8355 /* Todo+CoreDataClass.swift in Sources */,
+				2E8A242B283804C1009373A6 /* ViewController+TapGesture.swift in Sources */,
 				2E9B99C82829A37C004C8355 /* Sample_CoreData_MVVM.xcdatamodeld in Sources */,
 				2E9B99E5282A12DB004C8355 /* Storyboards.swift in Sources */,
 				2E9B99E3282A122A004C8355 /* ListPageViewController.swift in Sources */,

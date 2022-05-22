@@ -9,9 +9,7 @@ import UIKit
 
 class DetailPageViewController: UIViewController, DetailPageViewControllerProtocol{
     typealias ViewModelType = DetailPageViewModel
-
     var viewModel: ViewModelType?
-
     static var storyboardName: String = Storyboards.detailPage.rawValue
 
     @IBOutlet var titleTextField: UITextField!
@@ -25,14 +23,8 @@ class DetailPageViewController: UIViewController, DetailPageViewControllerProtoc
         detailTextView.layer.borderColor = CGColor(gray: 0, alpha: 0.2)
         detailTextView.layer.cornerRadius = 10
 
+        hideKeyboardWhenTappedAround()
         viewModel?.getDataForProperties()
-    }
-
-    @IBAction func chooseColor(_ sender: Any) {
-        
-    }
-    @IBAction func updateTodo(_ sender: Any) {
-
     }
 
     func prepareProperties(title: String, isDone: Bool, detail: String, color: UIColor){
@@ -42,4 +34,37 @@ class DetailPageViewController: UIViewController, DetailPageViewControllerProtoc
         view.backgroundColor = color
     }
 
+//    MARK: Action
+    @IBAction func chooseColor(_ sender: Any) {
+        let picker = UIColorPickerViewController()
+        picker.delegate = self
+        present(picker, animated: true, completion: nil)
+    }
+
+    @IBAction func deleteBtn(_ sender: Any) {
+        viewModel?.deleteData(completion:{
+            self.navigationController?.popViewController(animated: true)
+        })
+    }
+    
+    @IBAction func updateTodo(_ sender: Any) {
+        viewModel?.updateData(title: titleTextField.text,
+                              detail: detailTextView.text,
+                              color: view.backgroundColor ?? .white,
+                              isDone: isDoneSwitch.isOn,
+                              completion: {
+            self.navigationController?.popViewController(animated: true)
+        })
+    }
+}
+
+extension DetailPageViewController: UIColorPickerViewControllerDelegate{
+    func colorPickerViewControllerDidFinish(_ viewController: UIColorPickerViewController) {
+        view.backgroundColor = viewController.selectedColor
+        dismiss(animated: true, completion: nil)
+    }
+
+    func colorPickerViewController(_ viewController: UIColorPickerViewController, didSelect color: UIColor, continuously: Bool) {
+        view.backgroundColor = viewController.selectedColor
+    }
 }

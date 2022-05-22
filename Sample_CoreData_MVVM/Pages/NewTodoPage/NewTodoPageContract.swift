@@ -7,18 +7,15 @@
 
 import Foundation
 
-protocol NewTodoPageViewModelProtocol: AnyObject{
+
+protocol NewTodoPageViewModelProtocol: BaseViewModelProtocol where ViewType: NewTodoPageViewControllerProtocol, ModelType: NewTodoPageModelProtocol{
 
 }
 
-protocol NewTodoPageViewModelDelegate: BaseViewModelProtocol{
+protocol NewTodoPageViewControllerProtocol: BaseViewProtocol where ViewModelType :NewTodoPageViewModelProtocol{
 
 }
 
-protocol NewTodoPageViewControllerDelegate: AnyObject{
+protocol NewTodoPageModelProtocol: BaseModelProtocol{
 
 }
-
-//protocol NewTodoPageViewControllerProtocol: BaseViewProtocol{
-//    
-//}

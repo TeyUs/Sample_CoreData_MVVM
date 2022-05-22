@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Detail Page View Controller-->
+        <!--Title-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="DetailPageViewController" id="Y6W-OH-hqX" customClass="DetailPageViewController" customModule="Sample_CoreData_MVVM" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,12 +17,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vgt-f3-uaB">
-                                <rect key="frame" x="20" y="74" width="305" height="34"/>
+                                <rect key="frame" x="30" y="74" width="285" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Zf-Qb-thh">
-                                <rect key="frame" x="345" y="75.5" width="51" height="31"/>
+                                <rect key="frame" x="335" y="75.5" width="51" height="31"/>
                             </switch>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gPK-Vp-JD7">
                                 <rect key="frame" x="30" y="138" width="354" height="534"/>
@@ -51,11 +51,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Qbi-Wx-Try"/>
                                 </constraints>
-                                <color key="tintColor" red="0.93725484609999998" green="0.93725490570000003" blue="0.93725490570000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" systemColor="tintColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Update">
-                                    <color key="baseBackgroundColor" name="AccentColor"/>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="filled" title="Update"/>
                                 <connections>
                                     <action selector="updateTodo:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fmc-Zw-PyK"/>
                                 </connections>
@@ -68,12 +66,12 @@
                             <constraint firstItem="POW-b7-91K" firstAttribute="top" secondItem="V4M-wT-45q" secondAttribute="bottom" constant="20" id="FAF-ng-var"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="POW-b7-91K" secondAttribute="trailing" constant="30" id="Kul-GW-gGj"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="V4M-wT-45q" secondAttribute="trailing" constant="30" id="S2Q-aQ-eP0"/>
-                            <constraint firstItem="Vgt-f3-uaB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="UNB-4u-NAt"/>
+                            <constraint firstItem="Vgt-f3-uaB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="UNB-4u-NAt"/>
                             <constraint firstItem="9Zf-Qb-thh" firstAttribute="centerY" secondItem="Vgt-f3-uaB" secondAttribute="centerY" id="XUm-cq-O8u"/>
                             <constraint firstItem="gPK-Vp-JD7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="YnY-pY-G1W"/>
                             <constraint firstItem="Vgt-f3-uaB" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="b8p-Ju-x5B"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gPK-Vp-JD7" secondAttribute="trailing" constant="30" id="b8w-po-hvG"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9Zf-Qb-thh" secondAttribute="trailing" constant="20" id="hWQ-Zx-IN5"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9Zf-Qb-thh" secondAttribute="trailing" constant="30" id="hWQ-Zx-IN5"/>
                             <constraint firstItem="POW-b7-91K" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="hcJ-TH-YbJ"/>
                             <constraint firstItem="V4M-wT-45q" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="jlm-cG-XXJ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="POW-b7-91K" secondAttribute="bottom" constant="50" id="lwu-Il-u4N"/>
@@ -81,6 +79,22 @@
                             <constraint firstItem="9Zf-Qb-thh" firstAttribute="leading" secondItem="Vgt-f3-uaB" secondAttribute="trailing" constant="20" id="wxy-uw-MGa"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="mCh-tp-d0H">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Delete" image="trash.fill" catalog="system" id="DlV-Yt-Ptk">
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <connections>
+                                    <action selector="deleteBtn:" destination="Y6W-OH-hqX" id="az7-J1-JUL"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Update" image="square.and.arrow.down.fill" catalog="system" id="FX5-dr-aJs">
+                                <color key="tintColor" systemColor="tintColor"/>
+                                <connections>
+                                    <action selector="updateTodo:" destination="Y6W-OH-hqX" id="vEp-Cf-edW"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
                         <outlet property="detailTextView" destination="gPK-Vp-JD7" id="dN4-Xt-O3r"/>
                         <outlet property="isDoneSwitch" destination="9Zf-Qb-thh" id="SiR-72-9XT"/>
@@ -93,14 +107,19 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <image name="square.and.arrow.down.fill" catalog="system" width="121" height="128"/>
+        <image name="trash.fill" catalog="system" width="121" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

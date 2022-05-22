@@ -9,18 +9,10 @@ import Foundation
 import UIKit.UIColor
 import UIKit.UITableView
 
-protocol ListPageViewControllerProtocol: BaseViewControllerProtocol where ViewModelType: ListPageViewModelProtocol{
-
+protocol ListPageViewControllerProtocol: BaseViewProtocol where ViewModelType: ListPageViewModelProtocol{
     func deleteCell(index: Int)
     func updateCell(index: Int)
     func createCell(index: Int)
-
-    func goToAddPage()
-
-//    func getDataCount() -> Int
-//    func getCell(index: Int, tableView: UITableView) -> UITableViewCell
-//    func goToDetailPage(index: Int)
-//    func deleteCellForEditingStyle(index: Int)
 }
 
 protocol ListPageViewModelProtocol: BaseViewModelProtocol where ViewType: ListPageViewControllerProtocol, ModelType: ListPageModelProtocol{

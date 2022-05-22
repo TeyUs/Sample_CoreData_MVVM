@@ -7,14 +7,14 @@
 
 import UIKit
 
-class ListPageTableViewCell: UITableViewCell {
+class ListPageTableViewCell: UITableViewCell, ListPageTableViewCellProtocol {
+    var viewModel: ListPageTableCellViewModel?
+    static var storyboardName: String = Storyboards.listPageCell.rawValue
 
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var detailLabel: UILabel!
     @IBOutlet var isDoneSwitch: UISwitch!
     @IBOutlet var colorView: UIView!
-
-    var viewModel: ListPageTableCellViewModel?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,10 +25,18 @@ class ListPageTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
-    func configureCell(model: ListPageModel){
-        titleLabel.text = model.title
-        detailLabel.text = model.detail
-        isDoneSwitch.isOn = model.is_done
-        colorView.backgroundColor = model.color
+    func requestAttributes(){
+        viewModel?.prepareCell()
+    }
+
+    func prepareCell(title: String, isDone: Bool, detail: String, color: UIColor){
+        titleLabel.text = title
+        isDoneSwitch.isOn = isDone
+        detailLabel.text = detail
+        colorView.backgroundColor = color
+    }
+    
+    @IBAction func isDoneSwitcherChanged(_ sender: UISwitch) {
+        viewModel?.isDoneSwitcherValueChanced(isOn: sender.isOn)
     }
 }

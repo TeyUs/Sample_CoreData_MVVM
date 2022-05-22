@@ -10,11 +10,11 @@ import UIKit.UIColor
 
 protocol DetailPageViewModelProtocol: BaseViewModelProtocol where ViewType: DetailPageViewControllerProtocol, ModelType: DetailPageModelProtocol{
     func getDataForProperties()
-    func updateData(title: String?, detail: String?, color: UIColor, isDone: Bool ,completion: @escaping (() -> Void) )
-    func deleteData()
+    func updateData(title: String?, detail: String?, color: UIColor, isDone: Bool ,completion: @escaping () -> Void)
+    func deleteData(completion: @escaping () -> ())
 }
 
-protocol DetailPageViewControllerProtocol: BaseViewControllerProtocol where ViewModelType: DetailPageViewModelProtocol{
+protocol DetailPageViewControllerProtocol: BaseViewProtocol where ViewModelType: DetailPageViewModelProtocol{
     func prepareProperties(title: String, isDone: Bool, detail: String, color: UIColor)
 }
 

@@ -34,4 +34,17 @@ struct DetailPageModel: DetailPageModelProtocol {
         self.referance = listPageModel.referance
         self.index = index
     }
+
+    func updateModel(){
+        referance.title = title
+        referance.detail = detail
+        referance.is_done = is_done
+        referance.color = color
+        appdelegate.saveContext()
+    }
+
+    func deleteModel(){
+        context.delete(referance)
+        appdelegate.saveContext()
+    }
 }

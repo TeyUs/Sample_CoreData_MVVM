@@ -34,6 +34,9 @@
                     </label>
                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WRK-Ud-B8c">
                         <rect key="frame" x="266" y="53" width="51" height="31"/>
+                        <connections>
+                            <action selector="isDoneSwitcherChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="SbJ-hS-jom"/>
+                        </connections>
                     </switch>
                 </subviews>
                 <color key="backgroundColor" systemColor="systemYellowColor"/>
