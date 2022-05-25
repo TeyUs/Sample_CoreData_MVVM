@@ -1,5 +1,9 @@
 # Basic Todo App
 
+## Purpose of doing the project:
+* Using the "Protocol Structure" on MWWM and CoreData in the best way in my opinion.
+* To show an example of how the "BaseProtocols" folder can be used.
+
 ## Technical:
 
 * Used MVVM as structural pattern.
