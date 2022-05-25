@@ -52,6 +52,7 @@ final class DetailPageViewModel: DetailPageViewModelProtocol{
     }
 
     func deleteData(completion: @escaping () -> ()){
+        model.deleteModel()
         refreshCell(.deleted(index: model.index))
         completion()
     }
