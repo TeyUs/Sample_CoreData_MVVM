@@ -24,7 +24,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZC-eo-EmO">
-                        <rect key="frame" x="10" y="38.5" width="254" height="59.5"/>
+                        <rect key="frame" x="10" y="38.5" width="249" height="59.5"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="59.5" id="Ezw-Vl-lQD"/>
                         </constraints>
@@ -33,7 +33,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WRK-Ud-B8c">
-                        <rect key="frame" x="266" y="53" width="51" height="31"/>
+                        <rect key="frame" x="261" y="53" width="51" height="31"/>
                         <connections>
                             <action selector="isDoneSwitcherChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="SbJ-hS-jom"/>
                         </connections>
@@ -46,7 +46,7 @@
                     <constraint firstItem="sZC-eo-EmO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="C07-fH-mRx"/>
                     <constraint firstItem="3pr-xJ-1a4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="SJT-9d-ymh"/>
                     <constraint firstAttribute="bottom" secondItem="sZC-eo-EmO" secondAttribute="bottom" constant="2" id="Wc6-97-dHJ"/>
-                    <constraint firstAttribute="trailing" secondItem="WRK-Ud-B8c" secondAttribute="trailing" constant="5" id="cR0-I2-OEK"/>
+                    <constraint firstAttribute="trailing" secondItem="WRK-Ud-B8c" secondAttribute="trailing" constant="10" id="cR0-I2-OEK"/>
                     <constraint firstItem="3pr-xJ-1a4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="gFE-DK-vhy"/>
                     <constraint firstItem="sZC-eo-EmO" firstAttribute="top" secondItem="3pr-xJ-1a4" secondAttribute="bottom" constant="2" id="jil-L1-ZS8"/>
                     <constraint firstItem="WRK-Ud-B8c" firstAttribute="leading" secondItem="sZC-eo-EmO" secondAttribute="trailing" constant="2" id="o5s-yP-PcB"/>

@@ -22,7 +22,7 @@ class DetailPageViewController: UIViewController, DetailPageViewControllerProtoc
         detailTextView.layer.borderWidth = 1.0
         detailTextView.layer.borderColor = CGColor(gray: 0, alpha: 0.2)
         detailTextView.layer.cornerRadius = 10
-
+        
         hideKeyboardWhenTappedAround()
         viewModel?.getDataForProperties()
     }

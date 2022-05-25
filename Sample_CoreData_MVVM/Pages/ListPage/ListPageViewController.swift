@@ -17,6 +17,7 @@ class ListPageViewController: UIViewController, ListPageViewControllerProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        view.backgroundColor = .systemGray6
         tableView.delegate = self
         tableView.dataSource = self
 

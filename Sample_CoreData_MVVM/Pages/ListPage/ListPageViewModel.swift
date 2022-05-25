@@ -33,12 +33,6 @@ class ListPageViewModel: ListPageViewModelProtocol {
         }catch{
             fatalError("noteList cannot fetch")
         }
-//        let todo = Todo(context: context)
-//        todo.title = "nikki"
-//        todo.detail = "SelamunHelloSelamunHello\nSelamunHello\nSelamunHelloSelamunHello\nSelamunHello"
-//        todo.is_done = false
-//        todo.color = .yellow
-//        appdelegate.saveContext()
     }
 
 //    MARK: TableView
