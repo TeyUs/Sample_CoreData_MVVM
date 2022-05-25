@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ListPageViewController: UIViewController, ListPageViewControllerProtocol {
+final class ListPageViewController: UIViewController, ListPageViewControllerProtocol {
     typealias ViewModelType = ListPageViewModel
     static var storyboardName: String = Storyboards.listPage.rawValue
     var viewModel: ViewModelType?

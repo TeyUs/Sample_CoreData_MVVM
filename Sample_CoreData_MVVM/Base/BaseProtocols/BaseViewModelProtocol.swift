@@ -12,8 +12,7 @@ protocol BaseViewModelProtocol{
     associatedtype ViewType: BaseViewProtocol
     associatedtype ModelType: BaseModelProtocol
     var delegate: ViewType? { get set }
-    var model: ModelType { get set }
-//    mutating func startPage() -> ViewType
+    var model: ModelType { get }
 }
 
 extension BaseViewModelProtocol where ViewType: UIViewController{

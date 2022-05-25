@@ -40,36 +40,3 @@ extension BaseViewProtocol where Self: UIViewController{
 protocol BaseViewCellProtocol: BaseViewProtocol where Self: UITableViewCell{
     func requestAttributes()
 }
-
-
-
-
-//typealias BaseViewProtocol = UIViewController & BaseViewControllerProtocol
-
-
-
-//protocol Storyboarded{
-//    static var storyboardName: String {get}
-//}
-//
-//extension BaseViewControllerProtocol where Self: UIViewController{
-//    static func instantiate() -> Self{
-//        let storyboard = UIStoryboard(name: Self.storyboardName, bundle: nil)
-//
-//        guard let viewController = storyboard.instantiateViewController(withIdentifier: Self.className)  as? Self else {
-//            fatalError("Storyboard cannot instantiated")
-//        }
-//
-//        return viewController
-//    }
-//
-//    static func instantiate(withIdentifier identifier: String) -> Self{
-//        let storyboard = UIStoryboard(name: Self.storyboardName, bundle: nil)
-//
-//        guard let viewController = storyboard.instantiateViewController(withIdentifier: identifier) as? Self else {
-//            fatalError("Storyboard cannot instantiated")
-//        }
-//
-//        return viewController
-//    }
-//}

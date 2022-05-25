@@ -14,22 +14,18 @@ enum ChangeInCell {
     case created(listPageModel: ListPageModel)
 }
 
-class ListPageViewModel: ListPageViewModelProtocol {
+final class ListPageViewModel: ListPageViewModelProtocol {
 
     typealias ViewType = ListPageViewController
     typealias ModelType = ListPageModelList
 
-    var delegate: ViewType?
-    var model: ListPageModelList = ListPageModelList()
+    weak var delegate: ViewType?
+    var model: ListPageModelList
 
     init() {
-        model = fetchAllData()
-    }
-    
-    private func fetchAllData() -> ModelType{
         do{
             let todoList = try context.fetch(Todo.fetchRequest())
-            return ListPageModel.initFromAllListAsList(todos: todoList)
+            model = ListPageModel.initFromAllListAsList(todos: todoList)
         }catch{
             fatalError("noteList cannot fetch")
         }

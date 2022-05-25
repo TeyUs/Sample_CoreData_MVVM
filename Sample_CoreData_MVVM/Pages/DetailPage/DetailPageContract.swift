@@ -9,6 +9,7 @@ import Foundation
 import UIKit.UIColor
 
 protocol DetailPageViewModelProtocol: BaseViewModelProtocol where ViewType: DetailPageViewControllerProtocol, ModelType: DetailPageModelProtocol{
+    var refreshCell: (_ change: ChangeInCell) -> () { get }
     func getDataForProperties()
     func updateData(title: String?, detail: String?, color: UIColor, isDone: Bool ,completion: @escaping () -> Void)
     func deleteData(completion: @escaping () -> ())
@@ -19,5 +20,6 @@ protocol DetailPageViewControllerProtocol: BaseViewProtocol where ViewModelType:
 }
 
 protocol DetailPageModelProtocol: BaseModelProtocol{
-
+    func updateModel()
+    func deleteModel()
 }

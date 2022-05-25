@@ -9,7 +9,7 @@ import Foundation
 import UIKit.UIColor
 
 struct ListPageModelList: ListPageModelProtocol{
-    var list = [ListPageModel]() // Array<ListPageModel>()//
+    var list = [ListPageModel]() 
 }
 
 struct ListPageModel: ListPageModelProtocol {
@@ -51,20 +51,12 @@ struct ListPageModel: ListPageModelProtocol {
         self.referance = newTodoPageModel.referance!
     }
 
-    static func initFromAllList(todos: [Todo]) -> [ListPageModel]{
-        var listModel = [ListPageModel]()
-        for todo in todos {
-            listModel.append(ListPageModel(todo: todo))
-        }
-        return listModel
-    }
-
     static func initFromAllListAsList(todos: [Todo]) -> ListPageModelList{
         var listModel = [ListPageModel]()
         for todo in todos {
             listModel.append(ListPageModel(todo: todo))
         }
-        let listPageModelList = ListPageModelList(list: listModel)
-        return listPageModelList
+//        let listPageModelList = ListPageModelList(list: listModel)
+        return ListPageModelList(list: listModel)
     }
 }

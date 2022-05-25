@@ -8,11 +8,11 @@
 import Foundation
 import UIKit.UIColor
 
-class NewTodoPageViewModel: NewTodoPageViewModelProtocol {
+final class NewTodoPageViewModel: NewTodoPageViewModelProtocol {
     typealias ViewType = NewTodoPageViewController
     typealias ModelType = NewTodoPageModel
 
-    var delegate: NewTodoPageViewController?
+    weak var delegate: NewTodoPageViewController?
     var model: NewTodoPageModel
 
     var refreshCell: (_ change: ChangeInCell) -> ()

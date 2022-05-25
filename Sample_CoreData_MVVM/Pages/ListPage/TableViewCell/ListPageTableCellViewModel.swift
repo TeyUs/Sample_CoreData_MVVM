@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 import CoreData
 
-class ListPageTableCellViewModel: ListPageTableViewCellViewModelProtocol{
-    var delegate: ListPageTableViewCell?
+final class ListPageTableCellViewModel: ListPageTableViewCellViewModelProtocol{
+    weak var delegate: ListPageTableViewCell?
     var model: ListPageTableCellModel
 
     let tableView: UITableView

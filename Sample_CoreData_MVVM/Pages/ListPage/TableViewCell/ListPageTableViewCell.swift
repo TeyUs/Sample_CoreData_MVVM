@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ListPageTableViewCell: UITableViewCell, ListPageTableViewCellProtocol {
+final class ListPageTableViewCell: UITableViewCell, ListPageTableViewCellProtocol {
     var viewModel: ListPageTableCellViewModel?
     static var storyboardName: String = Storyboards.listPageCell.rawValue
 

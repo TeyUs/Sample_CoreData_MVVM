@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailPageViewController: UIViewController, DetailPageViewControllerProtocol{
+final class DetailPageViewController: UIViewController, DetailPageViewControllerProtocol{
     typealias ViewModelType = DetailPageViewModel
     var viewModel: ViewModelType?
     static var storyboardName: String = Storyboards.detailPage.rawValue

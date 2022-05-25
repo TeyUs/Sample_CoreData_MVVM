@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import UIKit.UIColor
 
 
 protocol NewTodoPageViewModelProtocol: BaseViewModelProtocol where ViewType: NewTodoPageViewControllerProtocol, ModelType: NewTodoPageModelProtocol{
-
+    var refreshCell: (_ change: ChangeInCell) -> () { get }
+    func saveData(title: String?, detail: String?, color: UIColor, completion: @escaping () -> Void)
 }
 
 protocol NewTodoPageViewControllerProtocol: BaseViewProtocol where ViewModelType :NewTodoPageViewModelProtocol{

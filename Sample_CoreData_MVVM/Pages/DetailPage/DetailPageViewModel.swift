@@ -8,11 +8,11 @@
 import Foundation
 import UIKit.UIColor
 
-class DetailPageViewModel: DetailPageViewModelProtocol{
+final class DetailPageViewModel: DetailPageViewModelProtocol{
     typealias ViewType = DetailPageViewController
     typealias ModelType = DetailPageModel
 
-    var delegate: ViewType?
+    weak var delegate: ViewType?
     var model: ModelType
 
     var refreshCell: (_ change: ChangeInCell) -> ()

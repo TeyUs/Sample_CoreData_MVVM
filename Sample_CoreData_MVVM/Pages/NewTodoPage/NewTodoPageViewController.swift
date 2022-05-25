@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NewTodoPageViewController: UIViewController, NewTodoPageViewControllerProtocol{
+final class NewTodoPageViewController: UIViewController, NewTodoPageViewControllerProtocol{
     typealias ViewModelType = NewTodoPageViewModel
 
     var viewModel: NewTodoPageViewModel?
