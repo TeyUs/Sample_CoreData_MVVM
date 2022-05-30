@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit.UIColor
+import MVVMBaseProtocols
 
 
 protocol NewTodoPageViewModelProtocol: BaseViewModelProtocol where ViewType: NewTodoPageViewControllerProtocol, ModelType: NewTodoPageModelProtocol{

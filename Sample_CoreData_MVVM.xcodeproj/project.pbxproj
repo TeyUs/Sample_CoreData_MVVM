@@ -8,21 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		2E252D382830DE0900BE31B5 /* ListPageContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E252D372830DE0900BE31B5 /* ListPageContract.swift */; };
-		2E8A242B283804C1009373A6 /* ViewController+TapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8A242A283804C1009373A6 /* ViewController+TapGesture.swift */; };
+		2E739A7D2843FF030080CA1A /* MVVMBaseProtocols in Frameworks */ = {isa = PBXBuildFile; productRef = 2E739A7C2843FF030080CA1A /* MVVMBaseProtocols */; };
 		2E8A242D2838EB66009373A6 /* ListPageTableViewCellContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8A242C2838EB66009373A6 /* ListPageTableViewCellContract.swift */; };
 		2E9B99BE2829A37C004C8355 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B99BD2829A37C004C8355 /* AppDelegate.swift */; };
 		2E9B99C02829A37C004C8355 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B99BF2829A37C004C8355 /* SceneDelegate.swift */; };
 		2E9B99C82829A37C004C8355 /* Sample_CoreData_MVVM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B99C62829A37C004C8355 /* Sample_CoreData_MVVM.xcdatamodeld */; };
 		2E9B99CA2829A37E004C8355 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E9B99C92829A37E004C8355 /* Assets.xcassets */; };
 		2E9B99CD2829A37E004C8355 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E9B99CB2829A37E004C8355 /* LaunchScreen.storyboard */; };
-		2E9B99D7282A10B2004C8355 /* BaseModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B99D6282A10B2004C8355 /* BaseModelProtocol.swift */; };
-		2E9B99D9282A10C4004C8355 /* BaseViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B99D8282A10C4004C8355 /* BaseViewModelProtocol.swift */; };
-		2E9B99DB282A10DB004C8355 /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B99DA282A10DB004C8355 /* BaseViewProtocol.swift */; };
 		2E9B99DF282A11F5004C8355 /* ListPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B99DE282A11F5004C8355 /* ListPageViewModel.swift */; };
 		2E9B99E1282A1214004C8355 /* ListPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B99E0282A1214004C8355 /* ListPageModel.swift */; };
 		2E9B99E3282A122A004C8355 /* ListPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B99E2282A122A004C8355 /* ListPageViewController.swift */; };
 		2E9B99E5282A12DB004C8355 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B99E4282A12DB004C8355 /* Storyboards.swift */; };
-		2E9B99E8282A13AD004C8355 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B99E7282A13AD004C8355 /* NSObjectExtension.swift */; };
 		2E9B99EC282A1491004C8355 /* ListPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E9B99EB282A1491004C8355 /* ListPage.storyboard */; };
 		2E9B99EF282A15D8004C8355 /* Todo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B99ED282A15D8004C8355 /* Todo+CoreDataClass.swift */; };
 		2E9B99F0282A15D8004C8355 /* Todo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B99EE282A15D8004C8355 /* Todo+CoreDataProperties.swift */; };
@@ -43,7 +39,6 @@
 
 /* Begin PBXFileReference section */
 		2E252D372830DE0900BE31B5 /* ListPageContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPageContract.swift; sourceTree = "<group>"; };
-		2E8A242A283804C1009373A6 /* ViewController+TapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+TapGesture.swift"; sourceTree = "<group>"; };
 		2E8A242C2838EB66009373A6 /* ListPageTableViewCellContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPageTableViewCellContract.swift; sourceTree = "<group>"; };
 		2E9B99BA2829A37C004C8355 /* Sample_CoreData_MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample_CoreData_MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E9B99BD2829A37C004C8355 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,14 +47,10 @@
 		2E9B99C92829A37E004C8355 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E9B99CC2829A37E004C8355 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E9B99CE2829A37E004C8355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2E9B99D6282A10B2004C8355 /* BaseModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModelProtocol.swift; sourceTree = "<group>"; };
-		2E9B99D8282A10C4004C8355 /* BaseViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModelProtocol.swift; sourceTree = "<group>"; };
-		2E9B99DA282A10DB004C8355 /* BaseViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewProtocol.swift; sourceTree = "<group>"; };
 		2E9B99DE282A11F5004C8355 /* ListPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPageViewModel.swift; sourceTree = "<group>"; };
 		2E9B99E0282A1214004C8355 /* ListPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPageModel.swift; sourceTree = "<group>"; };
 		2E9B99E2282A122A004C8355 /* ListPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPageViewController.swift; sourceTree = "<group>"; };
 		2E9B99E4282A12DB004C8355 /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
-		2E9B99E7282A13AD004C8355 /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		2E9B99EB282A1491004C8355 /* ListPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListPage.storyboard; sourceTree = "<group>"; };
 		2E9B99ED282A15D8004C8355 /* Todo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Todo+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2E9B99EE282A15D8004C8355 /* Todo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Todo+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -83,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E739A7D2843FF030080CA1A /* MVVMBaseProtocols in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,21 +116,9 @@
 			isa = PBXGroup;
 			children = (
 				2E9B99F1282A15DE004C8355 /* CoreDataEntities */,
-				2E9B99E6282A139C004C8355 /* Extensions */,
-				2E9B99D5282A1097004C8355 /* BaseProtocols */,
 				2E9B99E4282A12DB004C8355 /* Storyboards.swift */,
 			);
 			path = Base;
-			sourceTree = "<group>";
-		};
-		2E9B99D5282A1097004C8355 /* BaseProtocols */ = {
-			isa = PBXGroup;
-			children = (
-				2E9B99DA282A10DB004C8355 /* BaseViewProtocol.swift */,
-				2E9B99D8282A10C4004C8355 /* BaseViewModelProtocol.swift */,
-				2E9B99D6282A10B2004C8355 /* BaseModelProtocol.swift */,
-			);
-			path = BaseProtocols;
 			sourceTree = "<group>";
 		};
 		2E9B99DC282A11D6004C8355 /* Pages */ = {
@@ -162,15 +142,6 @@
 				2E9B99E0282A1214004C8355 /* ListPageModel.swift */,
 			);
 			path = ListPage;
-			sourceTree = "<group>";
-		};
-		2E9B99E6282A139C004C8355 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				2E9B99E7282A13AD004C8355 /* NSObjectExtension.swift */,
-				2E8A242A283804C1009373A6 /* ViewController+TapGesture.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		2E9B99F1282A15DE004C8355 /* CoreDataEntities */ = {
@@ -233,6 +204,9 @@
 			dependencies = (
 			);
 			name = Sample_CoreData_MVVM;
+			packageProductDependencies = (
+				2E739A7C2843FF030080CA1A /* MVVMBaseProtocols */,
+			);
 			productName = Sample_CoreData_MVVM;
 			productReference = 2E9B99BA2829A37C004C8355 /* Sample_CoreData_MVVM.app */;
 			productType = "com.apple.product-type.application";
@@ -261,6 +235,9 @@
 				Base,
 			);
 			mainGroup = 2E9B99B12829A37C004C8355;
+			packageReferences = (
+				2E739A7B2843FF030080CA1A /* XCRemoteSwiftPackageReference "MVVMBaseProtocols" */,
+			);
 			productRefGroup = 2E9B99BB2829A37C004C8355 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -299,24 +276,19 @@
 				2E252D382830DE0900BE31B5 /* ListPageContract.swift in Sources */,
 				2E9B99E1282A1214004C8355 /* ListPageModel.swift in Sources */,
 				2E9B99DF282A11F5004C8355 /* ListPageViewModel.swift in Sources */,
-				2E9B99D9282A10C4004C8355 /* BaseViewModelProtocol.swift in Sources */,
 				2E9B99F0282A15D8004C8355 /* Todo+CoreDataProperties.swift in Sources */,
 				2E9B9A00282B61B1004C8355 /* DetailPageViewController.swift in Sources */,
 				2E9B9A02282B61EE004C8355 /* DetailPageModel.swift in Sources */,
-				2E9B99E8282A13AD004C8355 /* NSObjectExtension.swift in Sources */,
-				2E9B99D7282A10B2004C8355 /* BaseModelProtocol.swift in Sources */,
 				2E9B99F5282A1BF9004C8355 /* ListPageTableViewCell.swift in Sources */,
 				2E9B9A09282CB843004C8355 /* NewTodoPageContract.swift in Sources */,
 				2E9B99BE2829A37C004C8355 /* AppDelegate.swift in Sources */,
 				2E8A242D2838EB66009373A6 /* ListPageTableViewCellContract.swift in Sources */,
 				2E9B9A14282CC35A004C8355 /* DetailPageContract.swift in Sources */,
 				2E9B99EF282A15D8004C8355 /* Todo+CoreDataClass.swift in Sources */,
-				2E8A242B283804C1009373A6 /* ViewController+TapGesture.swift in Sources */,
 				2E9B99C82829A37C004C8355 /* Sample_CoreData_MVVM.xcdatamodeld in Sources */,
 				2E9B99E5282A12DB004C8355 /* Storyboards.swift in Sources */,
 				2E9B99E3282A122A004C8355 /* ListPageViewController.swift in Sources */,
 				2E9B99C02829A37C004C8355 /* SceneDelegate.swift in Sources */,
-				2E9B99DB282A10DB004C8355 /* BaseViewProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +496,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2E739A7B2843FF030080CA1A /* XCRemoteSwiftPackageReference "MVVMBaseProtocols" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TeyhanYtu/MVVMBaseProtocols";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2E739A7C2843FF030080CA1A /* MVVMBaseProtocols */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E739A7B2843FF030080CA1A /* XCRemoteSwiftPackageReference "MVVMBaseProtocols" */;
+			productName = MVVMBaseProtocols;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		2E9B99C62829A37C004C8355 /* Sample_CoreData_MVVM.xcdatamodeld */ = {

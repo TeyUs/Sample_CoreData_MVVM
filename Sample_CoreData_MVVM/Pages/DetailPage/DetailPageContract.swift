@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit.UIColor
+import MVVMBaseProtocols
 
 protocol DetailPageViewModelProtocol: BaseViewModelProtocol where ViewType: DetailPageViewControllerProtocol, ModelType: DetailPageModelProtocol{
     var refreshCell: (_ change: ChangeInCell) -> () { get }

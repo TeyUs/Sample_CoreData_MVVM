@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MVVMBaseProtocols
 
 final class NewTodoPageViewController: UIViewController, NewTodoPageViewControllerProtocol{
     typealias ViewModelType = NewTodoPageViewModel

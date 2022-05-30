@@ -8,6 +8,7 @@
 import Foundation
 import UIKit.UIColor
 import UIKit.UITableView
+import MVVMBaseProtocols
 
 protocol ListPageViewControllerProtocol: BaseViewProtocol where ViewModelType: ListPageViewModelProtocol{
     func deleteCell(index: Int)

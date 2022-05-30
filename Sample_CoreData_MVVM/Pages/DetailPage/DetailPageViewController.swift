@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MVVMBaseProtocols
 
 final class DetailPageViewController: UIViewController, DetailPageViewControllerProtocol{
     typealias ViewModelType = DetailPageViewModel

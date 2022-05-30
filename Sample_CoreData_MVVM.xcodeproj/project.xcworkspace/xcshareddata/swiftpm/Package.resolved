@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "mvvmbaseprotocols",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/TeyhanYtu/MVVMBaseProtocols",
+      "state" : {
+        "branch" : "main",
+        "revision" : "abf05b33df35bbc90059f205655eebc1a9b8eda1"
+      }
+    }
+  ],
+  "version" : 2
+}

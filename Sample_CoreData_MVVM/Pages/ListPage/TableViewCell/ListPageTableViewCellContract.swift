@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit.UITableView
+import MVVMBaseProtocols
 
 protocol ListPageTableViewCellProtocol: BaseViewCellProtocol where ViewModelType: ListPageTableViewCellViewModelProtocol {
     func requestAttributes()
